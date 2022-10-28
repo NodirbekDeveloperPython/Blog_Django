@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login Parolingizni kiriting:💡</h1>
+    <br>
+    <hr>
+    <br>
+    <form action="/www/login/" method="post"> {% csrf_token %}
+        <input type="text" name="l"  placeholder="Loginingizni kiriting>>>">
+        <input type="text" name="p" placeholder="Parolingizni kiriting>>>">
+        <button type="submit">Kirish</button>
+    </form>
+    <br><br><br>
+    <a href="/www/register/">👉👉👉Ro'yhatdan O'tish uchun👈👈👈</a>
+</body>
+</html>

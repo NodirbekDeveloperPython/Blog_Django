@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ro'yhatdan o'tish</title>
+</head>
+<body>
+  <h1>Ro'hatdan O'tish:</h1>
+  <br>
+  <hr>
+  <br>
+  <form action="/www/register/" method="post"> {% csrf_token %}
+
+      <label for="ism">Ism:</label>
+      <input type="text" name="ism" id="ism">
+
+
+
+      <label for="yosh">Yosh:</label>
+      <input type="number" name="yosh" id="yosh">
+
+
+
+      <label for="kasb">Kasb:</label>
+      <input type="text" name="kasb" id="kasb">
+
+
+
+<!--      <label for="user">User:</label>-->
+<!--      <input type="text" name="" id="">-->
+<!--      <select name="user" id="user">-->
+<!--          {% for user in userlar %}-->
+<!--          <option value="">{{user}}</option>-->
+<!--          {% endfor %}-->
+<!--      </select>-->
+      <button type="submit">Kirish</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saytning batafsil maqolalari</title>
+</head>
+<body>
+      <h1>Maqolalar:</h1>
+      <br>
+      <hr>
+      <br>
+    {% for maqola in maqolalar %}
+    <h3>{{forloop.counter}}. <a href="/www/maqola/{{maqola.id}}/">{{maqola}}</a></h3>
+    {% endfor %}
+
+      <br>
+      <p></p>
+      <br>
+      <br>
+      <br>
+      <form action="/www/blog/" method="post"> {% csrf_token %}
+          <label for="sarlavha">Sarlavhasi:</label>
+          <input type="text" name="sarlavha" id="sarlavha"><br> <br>
+
+          <label for="sana">Sana:</label>
+          <input type="date" name="sana" id="sana"> <br> <br>
+
+          <label for="mavzu">Mavzu:</label>
+          <input type="text" name="mavzu" id="mavzu"> <br> <br>
+
+          <label for="matn">Matn:</label>
+          <input type="text" name="matn" id="matn"><br> <br>
+
+          <label for="muallif">Muallif:</label>
+          <select name="muallif" id="muallif">
+              {% for muallif in mualliflar %}
+              <option value="{{muallif.id}}">{{muallif}}</option>
+              {% endfor %}
+          </select>
+          <br><br>
+          <button type="submit">Saqlash</button>
+      </form>
+</body>
+</html>
